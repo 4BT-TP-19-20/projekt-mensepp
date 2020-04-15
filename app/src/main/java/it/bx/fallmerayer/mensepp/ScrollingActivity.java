@@ -13,9 +13,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class ScrollingActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scrolling);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
