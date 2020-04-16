@@ -21,21 +21,22 @@ public class Schulkalender {
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public void dateiToKalender() {
-        try {
-            Scanner scanner = new Scanner(new File(dateiname));//csv kaleder mit scanner öffnen
-            scanner.useDelimiter(";");//";" werden ignoriert
+        String[] values;
+        try (BufferedReader br = new BufferedReader(new FileReader(dateiname))) {
+            String line;
             for (int monate = 0; monate < 12; monate++) {
-                for (int tage = 0; tage < 31; ++tage) {
-                    kalender[tage][monate] = Integer.parseInt(scanner.next());//immer das nächste integer einlesen
+                line = br.readLine();
+                values = line.split(";");
+                for (int tage = 0; tage < 31; ++tage) {//int Integer umwandeln
+                    kalender[tage][monate] = Integer.parseInt(values[tage]);
                 }
             }
-            scanner.close();
-        } catch (Exception e){
-            System.out.println(e);;
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
-    public int[][] getKalender() {
+    public int[][] getSchulkalender() {
         return kalender;
     }
 }

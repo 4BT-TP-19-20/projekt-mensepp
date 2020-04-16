@@ -1,7 +1,7 @@
 package it.bx.fallmerayer.mensepp;
 
 public class Mensa {
-    private String[][] mensaplan = new String[7][5];
+    /*private String[][] mensaplan = new String[7][5];
     private Schulkalender schulkalender = new Schulkalender(".csv");
     private String[][] schulkalender = new String[7][5];
     private String[][] schulkalederMitEssen = new String[12][31];
@@ -32,5 +32,5 @@ public class Mensa {
                 }
             }
         }
-    }
+    }*/
 }
