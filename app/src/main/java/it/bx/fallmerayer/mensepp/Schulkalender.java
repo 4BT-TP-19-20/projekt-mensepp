@@ -13,14 +13,9 @@ import java.util.Scanner;
 
 public class Schulkalender {
     private int[][] kalender = new int[31][12];
-    private String dateiname;
-
-    public Schulkalender(String dateiname) {
-        this.dateiname = dateiname;
-    }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-    public void dateiToKalender() {
+    public void dateiToKalender(String dateiname) {
         String[] values;
         try (BufferedReader br = new BufferedReader(new FileReader(dateiname))) {
             String line;
