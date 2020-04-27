@@ -5,29 +5,36 @@ import android.os.Build;
 import androidx.annotation.RequiresApi;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.Date;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 public class Mensa {
     private String[][] mensaplan = new String[6][5];//6 wochen und 5 tage
     private int[][] schulkalenderInt;
     private String[][] schulkalederMitEssen = new String[12][31];
+    private InputStream inputStream = null;
 
-    public Mensa(int[][] schulkalender) {
+    public Mensa(int[][] schulkalender, InputStream inputStream) {
         this.schulkalenderInt = schulkalender;
+        this.inputStream = inputStream;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-    public void dateiToMensaplan(String dateiname){
+    public void dateiToMensaplan(){
         String[] values;
 
-        try (BufferedReader br = new BufferedReader(new FileReader(dateiname))) {
+
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
             String line;
             for (int woche = 0; woche < 6; woche++) {
                 line = br.readLine();
+                line = line.replace("ae", "ä");
+                line = line.replace("ue", "ü");
+                line = line.replace("oe", "ö");
+                line = line.replace("sss", "ß");
                 values = line.split(";");
-                for (int tage = 0; tage < 5; tage++) {//int Integer umwandeln
+                for (int tage = 0; tage < 5; tage++) {//6 wochen
                     mensaplan[woche][tage] = values[tage];
                 }
             }
@@ -43,7 +50,6 @@ public class Mensa {
         for (int monat = 8; monat < 12; monat++) {
             for (int tag = 0; tag < 31; tag++) {
                 if (schulkalenderInt[tag][monat] > 0) {
-
                     if (schulkalenderInt[tag][monat] <= lastSchultag) {
                         wochenPointer += 1;
                     } else if (ferienTage >= 7) {
@@ -67,7 +73,7 @@ public class Mensa {
         }
     }
 
-    public String getEssen(Date time) {
-        return schulkalederMitEssen[time.getMonth()][time.getDate() - 1];
+    public String getEssen(int month, int day) {
+        return schulkalederMitEssen[month][day-1];
     }
 }

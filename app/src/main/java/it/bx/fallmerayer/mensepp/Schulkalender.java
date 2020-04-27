@@ -5,19 +5,24 @@ import android.os.Build;
 import androidx.annotation.RequiresApi;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.Scanner;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 public class Schulkalender {
     private int[][] kalender = new int[31][12];
+    private String[] monate = {"Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"};
+    private InputStream inputStream = null;
+
+    public Schulkalender(InputStream inputStream) {
+        this.inputStream = inputStream;
+    }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-    public void dateiToKalender(String dateiname) {
+    public void dateiToKalender() {
         String[] values;
-        try (BufferedReader br = new BufferedReader(new FileReader(dateiname))) {
+
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
             String line;
             for (int monate = 0; monate < 12; monate++) {
                 line = br.readLine();
@@ -33,5 +38,9 @@ public class Schulkalender {
 
     public int[][] getSchulkalender() {
         return kalender;
+    }
+
+   public String getMonat(int month) {
+        return monate[month];
     }
 }
