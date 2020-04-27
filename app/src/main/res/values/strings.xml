@@ -3,4 +3,5 @@
     <string name="startBackground">startBackground</string>
     <string name="wilkommen">Wilkommen</string>
     <string name="beschreibung">beschreibung</string>
+    <string name="action_settings">Action Settings</string>
 </resources>
