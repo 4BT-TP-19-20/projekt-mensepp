@@ -3,6 +3,7 @@ package it.bx.fallmerayer.mensepp;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -274,6 +275,7 @@ public class MenuActivity extends AppCompatActivity {
     private String getTimeLeft() {
             if (date.getHours() < 9) {
                 if (date.getHours() == 8) {
+                    timeLeft.setTextColor(Color.GREEN);
                     return "noch: " + (60 - date.getMinutes()) + "min";
                 } else {
                     if (date.getMinutes() < 30)
@@ -282,6 +284,7 @@ public class MenuActivity extends AppCompatActivity {
                         return "noch ca.: " + (8 - date.getHours()) + "h";
                 }
             } else
+                timeLeft.setTextColor(Color.RED);
                 return "zu spät :(";
     }
 }
