@@ -18,22 +18,22 @@ public class StartActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setContentView(R.layout.activity_start);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//Potrait only mode
 
         final View view = this.getWindow().getDecorView().findViewById(android.R.id.content);
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                openActivity2(view);
+                openStartActivity(view);
             }
-        }, 700);
+        }, 700);//neu Activity mit Delay und einer Transition öffnen
     }
 
-    public void openActivity2(View view) {
-        Intent intent = new Intent(this, StartseiteActivity.class);
+    public void openStartActivity(View view) {
+        Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.slide_in_bottom, R.anim.slide_out_top);
+        overridePendingTransition(R.anim.slide_in_bottom, R.anim.slide_out_top);//transition, neu Activity von unten nach oben
     }
 }

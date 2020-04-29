@@ -6,7 +6,7 @@ import android.annotation.SuppressLint;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
-public class Help extends AppCompatActivity {
+public class HelpActivity extends AppCompatActivity {
 
     @SuppressLint("SourceLockedOrientationActivity")
     @Override

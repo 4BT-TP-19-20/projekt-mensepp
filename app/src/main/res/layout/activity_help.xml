@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundhelp"
-    tools:context="it.bx.fallmerayer.mensepp.Help">
+    tools:context="it.bx.fallmerayer.mensepp.HelpActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline10"

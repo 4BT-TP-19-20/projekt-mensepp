@@ -32,7 +32,6 @@ public class Mensa {
                 line = line.replace("ae", "ä");
                 line = line.replace("ue", "ü");
                 line = line.replace("oe", "ö");
-                line = line.replace("sss", "ß");
                 values = line.split(";");
                 for (int tage = 0; tage < 5; tage++) {//6 wochen
                     mensaplan[woche][tage] = values[tage];
@@ -47,9 +46,9 @@ public class Mensa {
         int wochenPointer = 0;
         int lastSchultag = 0;
         int ferienTage = 0;
-        for (int monat = 8; monat < 12; monat++) {
+        for (int monat = 8; monat < 12; monat++) {//weil Schule in September startet
             for (int tag = 0; tag < 31; tag++) {
-                if (schulkalenderInt[tag][monat] > 0) {
+                if (schulkalenderInt[tag][monat] > 0) {//wenn es Schule gibt
                     if (schulkalenderInt[tag][monat] <= lastSchultag) {
                         wochenPointer += 1;
                     } else if (ferienTage >= 7) {
