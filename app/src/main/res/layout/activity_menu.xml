@@ -52,9 +52,9 @@
         android:layout_width="215dp"
         android:layout_height="36dp"
         android:fontFamily="@font/armata"
-        android:text="1 dezember freitag"
-        android:textColor="#000000"
-        android:textSize="28sp"
+        android:text="7.4 donnerstag"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline5" />
@@ -67,9 +67,8 @@
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="12sp"
-        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
-        app:layout_constraintStart_toStartOf="@+id/guideline13" />
+        app:layout_constraintStart_toStartOf="@+id/guideline12" />
 
     <TextView
         android:id="@+id/datum2"
@@ -77,8 +76,8 @@
         android:layout_height="36dp"
         android:fontFamily="@font/armata"
         android:text="1"
-        android:textColor="#000000"
-        android:textSize="28sp"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintStart_toStartOf="@+id/guideline5" />
@@ -89,8 +88,8 @@
         android:layout_height="36dp"
         android:fontFamily="@font/armata"
         android:text="1"
-        android:textColor="#000000"
-        android:textSize="28sp"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline5" />
@@ -101,7 +100,7 @@
         android:layout_height="74dp"
         android:fontFamily="@font/armata"
         android:text="dfgsdgdfgsdf, ,  ,d,d , , , ,d fdfsdfdsfsd , , dfdsfsd , ,df gsd,dfg d,fgsd,fg TextView"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
@@ -112,7 +111,7 @@
         android:layout_height="76dp"
         android:fontFamily="@font/armata"
         android:text="TextView"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toTopOf="@+id/guideline6" />
@@ -123,7 +122,7 @@
         android:layout_height="76dp"
         android:fontFamily="@font/armata"
         android:text="TextView"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toTopOf="@+id/guideline8" />
@@ -174,7 +173,7 @@
         android:layout_height="77dp"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:srcCompat="@drawable/ha" />
+        app:srcCompat="@drawable/help" />
 
     <ImageView
         android:id="@+id/plus"
@@ -190,7 +189,7 @@
         android:layout_height="77dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:srcCompat="@drawable/hee" />
+        app:srcCompat="@drawable/attention" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -199,6 +198,14 @@
         android:orientation="vertical"
         app:layout_constraintGuide_begin="20dp"
         app:layout_constraintGuide_percent="0.31" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

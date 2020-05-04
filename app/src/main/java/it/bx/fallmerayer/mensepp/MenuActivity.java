@@ -110,13 +110,13 @@ public class MenuActivity extends AppCompatActivity {
     public void finish() {//mann kann nicht zurück gehen, weil die Start Activity das "Ladebildschirm" sein sollte
     }
 
-    private void openActivityHelp(View v){
+    private void openActivityHelp(View v) {
         Intent intent = new Intent(this, HelpActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
-    private void openActivityAttention(View v){
+    private void openActivityAttention(View v) {
         Intent intent = new Intent(this, AttentionActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
@@ -135,7 +135,7 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-    private void setDaysFurther(){
+    private void setDaysFurther() {
         goingBack = false;
         lastDay3 += 1;
         if (lastDay3 > 31) {//wenn neuer Monat
@@ -149,7 +149,7 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-    private void setDaysBack(){
+    private void setDaysBack() {
         goingBack = true;
         lastDay1 -= 1;
         if (lastDay1 < 1) {
@@ -181,7 +181,7 @@ public class MenuActivity extends AppCompatActivity {
         updateDate();
     }
 
-    private void setDaysMonthsForward(){
+    private void setDaysMonthsForward() {
         month[0] = lastMonth3;
         day[0] = lastDay3;
         checkNewDayNewMonthForward(0);
@@ -207,7 +207,7 @@ public class MenuActivity extends AppCompatActivity {
         }
     }
 
-    private void setDaysMonthsBack(){
+    private void setDaysMonthsBack() {
         month[2] = lastMonth1;
         day[2] = lastDay1;
         checkNewDayNewMonthBack(2);
@@ -233,7 +233,7 @@ public class MenuActivity extends AppCompatActivity {
         }
     }
 
-    private void checkNewDayNewMonthForward(int index){
+    private void checkNewDayNewMonthForward(int index) {
         if (day[index] > 31) {//neuer Monat
             day[index] = 1;
             if (month[index] == 11)
@@ -243,7 +243,7 @@ public class MenuActivity extends AppCompatActivity {
         }
     }
 
-    private void checkNewDayNewMonthBack(int index){
+    private void checkNewDayNewMonthBack(int index) {
         if (day[index] < 1) {//neuer Monat
             day[index] = 31;
             if (month[index] == 0)
@@ -253,38 +253,39 @@ public class MenuActivity extends AppCompatActivity {
         }
     }
 
-    private void updateEssen(){
+    private void updateEssen() {
         essen1.setText(mensa.getEssen(month[0], day[0]));
         essen2.setText(mensa.getEssen(month[1], day[1]));
         essen3.setText(mensa.getEssen(month[2], day[2]));
     }
 
     @SuppressLint("SetTextI18n")
-    private void updateDate(){
+    private void updateDate() {
         if (date.getDate() == day[0] && date.getMonth() == month[0]) {
             datum1.setText("Heute");
             timeLeft.setText(getTimeLeft());
         } else {
             timeLeft.setText(" ");
-            datum1.setText(day[0] + " " + schulkalender.getWochentag(month[0], day[0]));
+            datum1.setText(day[0] + "." + (month[0]+1) + " " + schulkalender.getWochentag(month[0], day[0]));
         }
-        datum2.setText(day[1] + " " + schulkalender.getWochentag(month[1], day[1]));
-        datum3.setText(day[2] + " " + schulkalender.getWochentag(month[2], day[2]));
+        System.out.println("sepp");
+        datum2.setText(day[1] + "." + (month[1]+1) + " " + schulkalender.getWochentag(month[1], day[1]));
+        datum3.setText(day[2] + "." + (month[2]+1) + " " + schulkalender.getWochentag(month[2], day[2]));
     }
 
     private String getTimeLeft() {
-            if (date.getHours() < 9) {
-                if (date.getHours() == 8) {
-                    timeLeft.setTextColor(Color.GREEN);
-                    return "noch: " + (60 - date.getMinutes()) + "min";
-                } else {
-                    if (date.getMinutes() < 30)
-                        return "noch ca.: " + (9 - date.getHours()) + "h";
-                    else
-                        return "noch ca.: " + (8 - date.getHours()) + "h";
-                }
-            } else
-                timeLeft.setTextColor(Color.RED);
-                return "zu spät :(";
+        if (date.getHours() < 9) {
+            if (date.getHours() == 8) {
+                timeLeft.setTextColor(Color.GREEN);
+                return "noch: " + (60 - date.getMinutes()) + "min";
+            } else {
+                if (date.getMinutes() < 30)
+                    return "noch ca.: " + (9 - date.getHours()) + "h";
+                else
+                    return "noch ca.: " + (8 - date.getHours()) + "h";
+            }
+        } else
+            timeLeft.setTextColor(Color.RED);
+        return "zu spät :(";
     }
 }

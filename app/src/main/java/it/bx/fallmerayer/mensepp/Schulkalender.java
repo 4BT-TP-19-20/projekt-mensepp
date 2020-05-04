@@ -11,8 +11,7 @@ import java.io.InputStreamReader;
 
 public class Schulkalender {
     private int[][] kalender = new int[31][12];
-    private String[] monate = {"Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"};
-    private String[] tage={"Montag, Dienstag, Mittwoch, Donnerstag, Freitag"};
+    private String[] tage = {"Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag"};
     private InputStream inputStream = null;
 
     public Schulkalender(InputStream inputStream) {
@@ -41,8 +40,10 @@ public class Schulkalender {
         return kalender;
     }
 
-   public String getWochentag(int month, int tag) {
-        int wochentag=kalender[month][tag];
-        return tage[wochentag-1];
+    public String getWochentag(int month, int tag) {
+        System.out.println("Month:" + month + " Tag: " + tag );
+        int wochentag = kalender[tag-1][month] -1;
+        System.out.println(wochentag);
+        return tage[wochentag];
     }
 }
