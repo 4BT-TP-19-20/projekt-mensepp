@@ -270,7 +270,6 @@ public class MenuActivity extends AppCompatActivity {
             datum1.setTextColor(Color.parseColor("#FFFFFF"));
             datum1.setText(day[0] + "." + (month[0]+1) + " " + schulkalender.getWochentag(month[0], day[0]));
         }
-        System.out.println("sepp");
         datum2.setText(day[1] + "." + (month[1]+1) + " " + schulkalender.getWochentag(month[1], day[1]));
         datum3.setText(day[2] + "." + (month[2]+1) + " " + schulkalender.getWochentag(month[2], day[2]));
     }
@@ -281,10 +280,7 @@ public class MenuActivity extends AppCompatActivity {
                 timeLeft.setTextColor(Color.parseColor("#E5A34D"));
                 return "noch: " + (60 - date.getMinutes()) + "min";
             } else {
-                if (date.getMinutes() < 30)
-                    return "noch ca.: " + (9 - date.getHours()) + "h";
-                else
-                    return "noch ca.: " + (8 - date.getHours()) + "h";
+                return "noch: " + (9-date.getHours()) + "h und " + + (60 - date.getMinutes()) + "min";
             }
         } else
             timeLeft.setTextColor(Color.parseColor("#C54848"));
