@@ -266,10 +266,10 @@ public class MenuActivity extends AppCompatActivity {
             timeLeft.setText(getTimeLeft());
         } else {
             timeLeft.setText(" ");
-            datum1.setText(day[0] + " " + schulkalender.getMonat(month[0]));
+            datum1.setText(day[0] + " " + schulkalender.getWochentag(month[0], day[0]));
         }
-        datum2.setText(day[1] + " " + schulkalender.getMonat(month[1]));
-        datum3.setText(day[2] + " " + schulkalender.getMonat(month[2]));
+        datum2.setText(day[1] + " " + schulkalender.getWochentag(month[1], day[1]));
+        datum3.setText(day[2] + " " + schulkalender.getWochentag(month[2], day[2]));
     }
 
     private String getTimeLeft() {
