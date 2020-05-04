@@ -49,12 +49,12 @@
 
     <TextView
         android:id="@+id/datum1"
-        android:layout_width="215dp"
-        android:layout_height="36dp"
-        android:fontFamily="@font/armata"
+        android:layout_width="220dp"
+        android:layout_height="52dp"
+        android:fontFamily="@font/gabriola"
         android:text="7.4 donnerstag"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline5" />
@@ -63,33 +63,33 @@
         android:id="@+id/timeleft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/armata"
+        android:fontFamily="@font/gabriola"
         android:text="TextView"
         android:textColor="#000000"
-        android:textSize="12sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="@+id/guideline12" />
 
     <TextView
         android:id="@+id/datum2"
-        android:layout_width="215dp"
-        android:layout_height="36dp"
-        android:fontFamily="@font/armata"
+        android:layout_width="217dp"
+        android:layout_height="48dp"
+        android:fontFamily="@font/gabriola"
         android:text="1"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintStart_toStartOf="@+id/guideline5" />
 
     <TextView
         android:id="@+id/datum3"
-        android:layout_width="215dp"
-        android:layout_height="36dp"
-        android:fontFamily="@font/armata"
+        android:layout_width="216dp"
+        android:layout_height="51dp"
+        android:fontFamily="@font/gabriola"
         android:text="1"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline5" />
@@ -98,10 +98,10 @@
         android:id="@+id/essen1"
         android:layout_width="250dp"
         android:layout_height="74dp"
-        android:fontFamily="@font/armata"
+        android:fontFamily="@font/gabriola"
         android:text="dfgsdgdfgsdf, ,  ,d,d , , , ,d fdfsdfdsfsd , , dfdsfsd , ,df gsd,dfg d,fgsd,fg TextView"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
@@ -109,10 +109,10 @@
         android:id="@+id/essen2"
         android:layout_width="249dp"
         android:layout_height="76dp"
-        android:fontFamily="@font/armata"
+        android:fontFamily="@font/gabriola"
         android:text="TextView"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toTopOf="@+id/guideline6" />
 
@@ -120,10 +120,10 @@
         android:id="@+id/essen3"
         android:layout_width="248dp"
         android:layout_height="76dp"
-        android:fontFamily="@font/armata"
+        android:fontFamily="@font/gabriola"
         android:text="TextView"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toTopOf="@+id/guideline8" />
 

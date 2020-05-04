@@ -41,9 +41,6 @@ public class Schulkalender {
     }
 
     public String getWochentag(int month, int tag) {
-        System.out.println("Month:" + month + " Tag: " + tag );
-        int wochentag = kalender[tag-1][month] -1;
-        System.out.println(wochentag);
-        return tage[wochentag];
+        return tage[kalender[tag-1][month] -1];
     }
 }

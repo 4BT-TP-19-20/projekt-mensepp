@@ -263,9 +263,11 @@ public class MenuActivity extends AppCompatActivity {
     private void updateDate() {
         if (date.getDate() == day[0] && date.getMonth() == month[0]) {
             datum1.setText("Heute");
+            datum1.setTextColor(Color.parseColor("#FFCA84"));
             timeLeft.setText(getTimeLeft());
         } else {
             timeLeft.setText(" ");
+            datum1.setTextColor(Color.parseColor("#FFFFFF"));
             datum1.setText(day[0] + "." + (month[0]+1) + " " + schulkalender.getWochentag(month[0], day[0]));
         }
         System.out.println("sepp");
@@ -276,7 +278,7 @@ public class MenuActivity extends AppCompatActivity {
     private String getTimeLeft() {
         if (date.getHours() < 9) {
             if (date.getHours() == 8) {
-                timeLeft.setTextColor(Color.GREEN);
+                timeLeft.setTextColor(Color.parseColor("#E5A34D"));
                 return "noch: " + (60 - date.getMinutes()) + "min";
             } else {
                 if (date.getMinutes() < 30)
@@ -285,7 +287,7 @@ public class MenuActivity extends AppCompatActivity {
                     return "noch ca.: " + (8 - date.getHours()) + "h";
             }
         } else
-            timeLeft.setTextColor(Color.RED);
-        return "zu spät :(";
+            timeLeft.setTextColor(Color.parseColor("#C54848"));
+        return "zu spät";
     }
 }

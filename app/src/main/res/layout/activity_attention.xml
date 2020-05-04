@@ -27,10 +27,10 @@
         android:id="@+id/textView2"
         android:layout_width="302dp"
         android:layout_height="510dp"
-        android:fontFamily="@font/armata"
+        android:fontFamily="@font/gabriola"
         android:text="Die Daten aus unserer App könnten manchmal falsch sein, da offline Daten genutzt werden. Deshalb können kurzfristige Änderungen oder Ausfälle der Mensa nicht berücksichtigt werden. Diese App ist nur für das Schuljahr 2019/20 gültig!"
         android:textColor="#000000"
-        android:textSize="24sp"
+        android:textSize="35sp"
         app:layout_constraintStart_toStartOf="@+id/guideline10"
         app:layout_constraintTop_toTopOf="@+id/guideline11" />
 </androidx.constraintlayout.widget.ConstraintLayout>

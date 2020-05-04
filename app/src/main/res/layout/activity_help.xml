@@ -27,10 +27,10 @@
         android:id="@+id/textView2"
         android:layout_width="302dp"
         android:layout_height="510dp"
-        android:fontFamily="@font/armata"
+        android:fontFamily="@font/gabriola"
         android:text="Bei unserer App sehen sie immer was es in den nächsten drei Schultagen zu essen gibt. Mit dem + kommt man drei Schultage weiter und mit dem – kommt man 3 Schultage zurück. Zudem sieht man am Tag der gerade ist ob und wieviel Zeit man noch hat sich anzumelden."
         android:textColor="#000000"
-        android:textSize="24sp"
+        android:textSize="35sp"
         app:layout_constraintStart_toStartOf="@+id/guideline10"
         app:layout_constraintTop_toTopOf="@+id/guideline11" />
 
