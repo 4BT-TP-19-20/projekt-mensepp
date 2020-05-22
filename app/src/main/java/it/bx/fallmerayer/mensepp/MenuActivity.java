@@ -280,7 +280,7 @@ public class MenuActivity extends AppCompatActivity {
                 timeLeft.setTextColor(Color.parseColor("#E5A34D"));
                 return "noch: " + (60 - date.getMinutes()) + "min";
             } else {
-                return "noch: " + (9-date.getHours()) + "h und " + + (60 - date.getMinutes()) + "min";
+                return "noch: " + (8-date.getHours()) + "h und " + + (60 - date.getMinutes()) + "min";
             }
         } else
             timeLeft.setTextColor(Color.parseColor("#C54848"));
