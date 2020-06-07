@@ -28,7 +28,7 @@
         android:layout_width="302dp"
         android:layout_height="510dp"
         android:fontFamily="@font/gabriola"
-        android:text="Die Daten aus unserer App könnten manchmal falsch sein, da offline Daten genutzt werden. Deshalb können kurzfristige Änderungen oder Ausfälle der Mensa nicht berücksichtigt werden. Diese App ist nur für das Schuljahr 2019/20 gültig!"
+        android:text="Die Daten aus unserer App könnten manchmal falsch sein, da offline Daten genutzt werden. Deshalb können kurzfristige Änderungen oder Ausfälle der Mensa nicht berücksichtigt werden. Diese App ist nur für das Schuljahr 2020/21 gültig!"
         android:textColor="#000000"
         android:textSize="35sp"
         app:layout_constraintStart_toStartOf="@+id/guideline10"
